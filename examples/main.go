@@ -1,18 +1,3 @@
-# GoSegmentIO
-
-This Package is a simple solution for Segment.io API Go binding.
-For the server side analysing.
-
-
-## Installation
-
-```
-	go get "github.com/athom/gosegmentio"
-```
-
-## Usage
-
-```go
 package main
 
 import (
@@ -30,11 +15,6 @@ func main() {
 	gosegmentio.Track("007", "Avatar", map[string]interface{}{
 		"Name":    "Kioshi",
 		"Age":     303,
-		"Country": "Earch Kindom",
+		"Country": "Earth Kindom",
 	}, map[string]interface{}{})
 }
-```
-
-## License
-
-It is released under the [WTFPL License](http://www.wtfpl.net/txt/copying).
