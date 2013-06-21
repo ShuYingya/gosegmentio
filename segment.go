@@ -136,3 +136,20 @@ func (this *Pusher) Track(userId string, eventName string, eventProperties map[s
 	m["context"] = c
 	return this.SendData("track", m)
 }
+
+func Alias(fromId string, toId string, context map[string]interface{}) (err error) {
+	return DefaultPusher.Alias(fromId, toId, context)
+}
+
+func (this *Pusher) Alias(fromId string, toId string, context map[string]interface{}) (err error) {
+	m := map[string]interface{}{}
+	m["secret"] = this.secretToken
+	m["from"] = fromId
+	m["to"] = toId
+	c := map[string]interface{}{}
+	for k, v := range context {
+		c[k] = v
+	}
+	m["context"] = c
+	return this.SendData("alias", m)
+}
