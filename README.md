@@ -1,6 +1,6 @@
 # GoSegmentIO
 
-This Package is a simple solution for Segment.io API Go binding.
+This Package is a simple solution for [segmentio](https://segment.io) API Go binding.
 For the server side analysing.
 
 [![Build Status](https://api.travis-ci.org/athom/gosegmentio.png?branch=master)](https://travis-ci.org/athom/gosegmentio)
