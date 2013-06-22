@@ -153,3 +153,14 @@ func (this *Pusher) Alias(fromId string, toId string, context map[string]interfa
 	m["context"] = c
 	return this.SendData("alias", m)
 }
+
+func Import(batch []map[string]interface{}) (err error) {
+	return DefaultPusher.Import(batch)
+}
+
+func (this *Pusher) Import(batch []map[string]interface{}) (err error) {
+	m := map[string]interface{}{}
+	m["secret"] = this.secretToken
+	m["batch"] = batch
+	return this.SendData("import", m)
+}
