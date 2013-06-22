@@ -13,7 +13,7 @@ For the server side analysing.
 
 ## Usage
 
-- #### Simple Usage:
+#### Simple Usage:
 
 ```go
 package main
@@ -62,9 +62,9 @@ func main() {
 }
 ```
 
-- #### Advanced(the batch feature):
+#### Advanced(the batch feature):
 
-Please refer the [examples](https://github.com/athom/gosegmentio/blob/master/examples/batch_demo.go)
+Please refer the [examples](https://github.com/athom/gosegmentio/blob/master/examples/batch_demo.go);
 
 ## License
 
