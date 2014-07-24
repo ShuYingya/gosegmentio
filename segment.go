@@ -82,6 +82,10 @@ func (this *Pusher) Do(verb string, m interface{}, ech chan error) {
 }
 
 func (this *Pusher) SendData(verb string, m interface{}) (err error) {
+	if this.secretToken == "" {
+		return
+	}
+
 	ech := make(chan error)
 	go this.Do(verb, m, ech)
 	select {
